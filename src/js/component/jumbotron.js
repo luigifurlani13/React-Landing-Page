@@ -2,7 +2,7 @@ import React from "react";
 
 export function Jumbotron() {
 	return (
-		<div className="bg-secondary">
+		<div className="bg-secondary text-start">
 			<h1>A Warm Welcome!</h1>
 			<p>
 				Donec ullamcorper nulla non metus auctor fringilla. Vestibulum

@@ -10,29 +10,29 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 
 const myCards = [
-	{ title: "Luis", description: "My name" },
-	{ title: "Victor", description: "My father" },
-	{ title: "Paolo", description: "My mentor" },
-	{ title: "Valentina:", description: "My sister" }
+	{ title: "Luis", description: "My Name" },
+	{ title: "Victor", description: "My Father" },
+	{ title: "Paolo", description: "My Mentor" },
+	{ title: "Valentina:", description: "My Sister" }
 ];
 
 export function Home() {
 	return (
-		<div className="text-center mt-5">
+		<div>
 			<NavBar />
 			<div className="container">
 				<Jumbotron />
-				{myCards.map((item, i) => {
-					return (
-						<div className="container" key={i}>
-							<div className="row">
-								<div className="col-6">
+				<div className="container">
+					<div className="row">
+						{myCards.map((item, i) => {
+							return (
+								<div className="col-3" key={i}>
 									<Card />
 								</div>
-							</div>
-						</div>
-					);
-				})}
+							);
+						})}
+					</div>
+				</div>
 			</div>
 		</div>
 	);
