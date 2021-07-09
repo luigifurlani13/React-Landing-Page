@@ -13,7 +13,7 @@ const myCards = [
 	{ title: "Luis", description: "My Name" },
 	{ title: "Victor", description: "My Father" },
 	{ title: "Paolo", description: "My Mentor" },
-	{ title: "Valentina:", description: "My Sister" }
+	{ title: "Valentina", description: "My Sister" }
 ];
 
 export function Home() {
@@ -27,7 +27,10 @@ export function Home() {
 						{myCards.map((item, i) => {
 							return (
 								<div className="col-3" key={i}>
-									<Card />
+									<Card
+										title={item.title}
+										description={item.description}
+									/>
 								</div>
 							);
 						})}
