@@ -1,29 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-export function Card(props) {
+export const Carta = props => {
 	return (
-		<div className="card w-75 p-3" style={{ width: "18rem" }}>
-			<img src={props.image} className="card-img-top" alt="..."></img>
-			<div className="card-body">
-				<h5 className="card-title">{props.title}</h5>
-				<p className="card-text">{props.description}</p>
-				<a href="#" className="btn btn-primary">
-					Find out more!
-				</a>
-			</div>
-		</div>
+		<Card style={{ width: "20rem" }}>
+			<Card.Img variant="top" src={props.image} />
+			<Card.Body>
+				<Card.Title>{props.title}</Card.Title>
+				<Card.Text>{props.text}</Card.Text>
+				<Button variant="danger">{props.button}</Button>
+			</Card.Body>
+		</Card>
 	);
-}
-
-Card.propTypes = {
-	title: PropTypes.string,
-	description: PropTypes.string,
-	image: PropTypes.string
 };
 
-Card.defaultProps = {
-	title: "Luis",
-	image:
-		"https://cdn.faithgateway.com/uploads/2015/10/quiet-breaks-with-god-500x325.jpg"
+Carta.propTypes = {
+	image: PropTypes.string,
+	title: PropTypes.string,
+	text: PropTypes.string,
+	button: PropTypes.string
 };

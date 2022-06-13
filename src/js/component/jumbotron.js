@@ -1,8 +1,10 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-export function Jumbotron() {
+export const Banner = () => {
 	return (
-		<div className="bg-secondary text-start">
+		<Container>
 			<h1>A Warm Welcome!</h1>
 			<p>
 				Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
@@ -10,9 +12,7 @@ export function Jumbotron() {
 				magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus
 				ac cursus commodo.
 			</p>
-			<button type="button" className="btn btn-primary">
-				Call to action!
-			</button>
-		</div>
+			<Button variant="primary">Call to action!</Button>
+		</Container>
 	);
-}
+};

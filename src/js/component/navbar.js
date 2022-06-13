@@ -1,58 +1,19 @@
 import React from "react";
+import { Navbar } from "react-bootstrap";
 
-//include images into your bundle
-// import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
-export function NavBar() {
+export const NavBar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div className="container-fluid">
-				<a className="navbar-brand" href="#">
-					Start Bootstrap
-				</a>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon"></span>
-				</button>
-				<div className="d-flex" id="navbarNav">
-					<ul className="navbar-nav">
-						<li className="nav-item">
-							<a
-								className="nav-link active"
-								aria-current="page"
-								href="#">
-								Home
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								About
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Services
-							</a>
-						</li>
-						<li className="nav-item">
-							<a
-								className="nav-link disabled"
-								href="#"
-								tabIndex="-1"
-								aria-disabled="true">
-								Contact
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<Navbar bg="dark" variant="dark">
+			<Navbar.Brand href="#home">
+				<img
+					alt=""
+					src="https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png"
+					width="30"
+					height="30"
+					className="d-inline-block align-top"
+				/>{" "}
+				React Bootstrap
+			</Navbar.Brand>
+		</Navbar>
 	);
-}
+};
